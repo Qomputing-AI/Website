@@ -1,9 +1,12 @@
-// app/page.tsx
+import Navbar from "../components/navbar";
+import Hero from "../components/hero";
+
+
 export default function HomePage() {
   return (
     <main>
-      <h1>Welcome to Qomputing</h1>
-      <p>This is a clean Next.js app.</p>
+      <Navbar />
+      <Hero />
     </main>
   );
 }
