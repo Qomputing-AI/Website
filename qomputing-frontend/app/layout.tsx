@@ -1,4 +1,6 @@
 // app/layout.tsx
+import { ThemeProvider } from '@mui/material';
+import { theme } from '../theme'
 import './globals.css';
 
 export const metadata = {
@@ -11,9 +13,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
+
+return (
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider theme={theme}>
+        {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
