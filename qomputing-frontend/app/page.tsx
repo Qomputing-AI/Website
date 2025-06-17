@@ -1,9 +1,9 @@
-import Image from "next/image";
-
-export default function Home() {
+// app/page.tsx
+export default function HomePage() {
   return (
-    <div>
-      Qomputing
-    </div>
+    <main>
+      <h1>Welcome to Qomputing</h1>
+      <p>This is a clean Next.js app.</p>
+    </main>
   );
 }
