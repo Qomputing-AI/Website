@@ -1,6 +1,7 @@
 "use client";
 import { Box, Typography, Button, Stack, Container } from "@mui/material";
 import { useEffect, useState } from "react";
+import { ctaContent } from "@/utils/constants/homePage";
 
 const CTA = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -111,11 +112,7 @@ const CTA = () => {
               }
             }}
           >
-            Ready to Enter the <span style={{ 
-              color: "#FCEFB4", 
-              textShadow: "0 0 10px rgba(252, 239, 180, 0.3)",
-              position: "relative",
-            }}>Quantum Era?</span>
+            {ctaContent.heading}
           </Typography>
 
           <Typography
@@ -129,8 +126,7 @@ const CTA = () => {
               lineHeight: 1.6,
             }}
           >
-            Join thousands of developers, researchers, and quantum enthusiasts
-            building the future of computation.
+            {ctaContent.subheading}
           </Typography>
 
           <Stack 
@@ -173,7 +169,7 @@ const CTA = () => {
                 }
               }}
             >
-              Start Free Trial
+              {ctaContent.button1}
             </Button>
             <Button
               variant="outlined"
@@ -208,7 +204,7 @@ const CTA = () => {
                 }
               }}
             >
-              Join Qommunity
+              {ctaContent.button2}
             </Button>
           </Stack>
         </Box>

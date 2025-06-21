@@ -20,13 +20,8 @@ import {
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
+import { navLinks } from "@/utils/constants/navbar";
 
-const navLinks = [
-  { label: "Products", href: "#" },
-  { label: "Community", href: "#" },
-  { label: "Qourses", href: "#" },
-  { label: "About", href: "#" },
-];
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);

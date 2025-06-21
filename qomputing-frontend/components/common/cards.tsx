@@ -1,73 +1,13 @@
 "use client";
 
 import { Box, Typography, Button, Grid, Card, CardContent, Stack } from '@mui/material';
-import { Zap, CpuIcon, UsersIcon, BookIcon, WrenchIcon, LineChartIcon } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { products, cardTitle } from '@/utils/constants/homePage';
 
-const products = [
-  {
-    icon: <Zap size={32} color="#FCEFB4" />,
-    title: 'Qomputing IDE',
-    points: [
-      'Interactive UI/UX with Drag and Drop feature',
-      'Integrated AI for Circuit Designing',
-      'Integrate with any Quantum Simulator or Hardware',
-      'Our own Qomputing Simulators',
-    ],
-  },
-  {
-    icon: <CpuIcon size={32} color="#FCEFB4" />,
-    title: 'Qomputing Simulator',
-    points: [
-      'Freely available 20+ qubit simulator',
-      'Assembly Language Base',
-      'AI based Qomputing Simulator',
-      'Qomputing Simulators for specific use cases',
-    ],
-  },
-  {
-    icon: <UsersIcon size={32} color="#FCEFB4" />,
-    title: 'Qommunity',
-    points: [
-      'Engage with Similar and Curious minds',
-      'Get updates on Quantum Advancements and research',
-      'Collaborative Research Projects',
-      'Weekly Quantum Workshops & Webinars',
-    ],
-  },
-  {
-    icon: <BookIcon size={32} color="#FCEFB4" />,
-    title: 'Qourses',
-    points: [
-      'Practice on Qomputing IDE',
-      'Hands-on Projects',
-      'Expert Instructors',
-      'Certification',
-    ],
-  },
-  {
-    icon: <WrenchIcon size={32} color="#FCEFB4" />,
-    title: 'Tool Library',
-    points: [
-      'Algorithm Collection',
-      'Research Tools',
-      'Dynamically Typed Codes',
-      'Regular Updates',
-    ],
-  },
-  {
-    icon: <LineChartIcon size={32} color="#FCEFB4" />,
-    title: 'Prediction Modeling',
-    points: [
-      'Monte Carlo Methods',
-      'Risk Quantification',
-      'Probabilistic Models',
-      'Predictive Analytics',
-    ],
-  },
-];
 
-export default function QuantumProductCards() {
+
+export default function QuantumProductCards({temp}: { temp: string }) {
+  console.log(temp);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -141,7 +81,7 @@ export default function QuantumProductCards() {
             }
           }}
         >
-          Complete Quantum <span style={{ color: '#FCEFB4', textShadow: '0 0 10px rgba(252, 239, 180, 0.3)' }}>Ecosystem</span>
+          {cardTitle.title}
         </Typography>
         <Typography 
           variant="body1" 
@@ -154,7 +94,7 @@ export default function QuantumProductCards() {
             mt: 3,
           }}
         >
-          From development to deployment, our integrated suite of tools empowers you to harness the full potential of quantum computing.
+          {cardTitle.subheading}
         </Typography>
 
         <Grid component="div" display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={4}>

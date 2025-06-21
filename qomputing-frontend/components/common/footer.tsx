@@ -7,36 +7,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
+import { footerContent, footerLinks } from "@/utils/constants/footer";
 
-const footerLinks = [
-  {
-    title: "Products",
-    links: [
-      { label: "Qomputing IDE", href: "#" },
-      { label: "Qomputing Simulator", href: "#" },
-      { label: "Quantum Tools", href: "#" },
-      { label: "Pricing", href: "#" },
-    ]
-  },
-  {
-    title: "Resources",
-    links: [
-      { label: "Documentation", href: "#" },
-      { label: "Tutorials", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Research Papers", href: "#" },
-    ]
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About Us", href: "/about" },
-      { label: "Careers", href: "#" },
-      { label: "Contact", href: "#" },
-      { label: "Privacy Policy", href: "#" },
-    ]
-  },
-];
+
 
 const Footer = () => {
   return (
@@ -63,11 +36,11 @@ const Footer = () => {
                   letterSpacing: "0.5px"
                 }}
               >
-                Qomputing
+                {footerContent.heading}
               </Typography>
             </Box>
             <Typography variant="body2" sx={{ color: "rgba(255, 255, 255, 0.7)", mb: 3, maxWidth: "90%" }}>
-              Empowering the future of computation with our comprehensive quantum development environment. Join us on the quantum journey.
+              {footerContent.subheading}
             </Typography>
             <Box sx={{ display: "flex", gap: 1 }}>
               <IconButton 
@@ -168,10 +141,10 @@ const Footer = () => {
                 color: "#FCEFB4"
               }}
             >
-              Join Our Newsletter
+              {footerContent.newsletter}
             </Typography>
             <Typography variant="body2" sx={{ color: "rgba(255, 255, 255, 0.7)", mb: 2 }}>
-              Stay updated with the latest in quantum computing.
+              {footerContent.subletter}
             </Typography>
             <Button
               variant="contained"
@@ -190,7 +163,7 @@ const Footer = () => {
                 transition: "all 0.3s ease",
               }}
             >
-              Subscribe
+              {footerContent.subscribe}
             </Button>
           </Grid>
         </Grid>
@@ -199,7 +172,7 @@ const Footer = () => {
         
         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap" }}>
           <Typography variant="body2" sx={{ color: "rgba(255, 255, 255, 0.5)" }}>
-            © {new Date().getFullYear()} Qomputing. All rights reserved.
+            {footerContent.copyright.replace("{new Date().getFullYear()}", new Date().getFullYear().toString())}
           </Typography>
           <Box sx={{ display: "flex", gap: 3 }}>
             <Box
@@ -214,7 +187,7 @@ const Footer = () => {
                 }
               }}
             >
-              Terms of Service
+              {footerContent.terms}
             </Box>
             <Box
               component={Link}
@@ -228,7 +201,7 @@ const Footer = () => {
                 }
               }}
             >
-              Privacy Policy
+              {footerContent.privacy}
             </Box>
             <Box
               component={Link}
@@ -242,7 +215,7 @@ const Footer = () => {
                 }
               }}
             >
-              Cookies
+              {footerContent.cookies}
             </Box>
           </Box>
         </Box>

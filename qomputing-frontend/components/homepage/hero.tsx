@@ -1,5 +1,6 @@
 "use client";
 
+import { heroContent, heroFeatureList } from "@/utils/constants/homePage";
 import { Box, Typography, Button, Container } from "@mui/material";
 import { useEffect, useState } from "react";
 
@@ -100,7 +101,7 @@ const Hero = () => {
               display: "block"
             }}
           >
-            — QUANTUM COMPUTING PLATFORM
+            {heroContent.tagline}
           </Typography>
         </Box>
 
@@ -143,7 +144,7 @@ const Hero = () => {
               }
             }}
           >
-            QOMPUTING
+            {heroContent.heading}
           </Typography>
         </Box>
 
@@ -166,7 +167,7 @@ const Hero = () => {
               lineHeight: 1.6
             }}
           >
-            Experience the future of computation with our comprehensive quantum development environment. From IDE to simulation, we've got your quantum journey covered.
+            {heroContent.subheading}
           </Typography>
         </Box>
 
@@ -182,12 +183,7 @@ const Hero = () => {
             transition: "opacity 0.6s ease 0.6s, transform 0.6s ease 0.6s",
           }}
         >
-          {[
-            "AI powered Circuit designing",
-            "Interactive UI/UX",
-            "Hardware Integration",
-            "Qomputing® Simulator"
-          ].map((label, index) => (
+          {heroFeatureList.map((label, index) => (
             <Button 
               key={label}
               variant="outlined" 
@@ -264,7 +260,7 @@ const Hero = () => {
               }
             }}
           >
-            Try Qomputing IDE
+            {heroContent.primaryCTA}
           </Button>
           <Button 
             variant="outlined" 
@@ -299,7 +295,7 @@ const Hero = () => {
               }
             }}
           >
-            View Documentation
+            {heroContent.secondaryCTA}
           </Button>
         </Box>
       </Container>
