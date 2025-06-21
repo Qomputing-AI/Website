@@ -233,7 +233,7 @@ const Hero = () => {
           <Button 
             variant="contained" 
             sx={{
-              borderRadius: '30px', 
+              // borderRadius: '30px', 
               px: 4, 
               py: 1.5, 
               backgroundColor: "#FCEFB4",
