@@ -1,8 +1,8 @@
-import Navbar from "../components/navbar";
-import Hero from "../components/hero";
-import Footer from "../components/footer";
-import CTA from "../components/cta";
-import QuantumProductCards from "../components/cards";
+import Navbar from "../components/common/navbar";
+import Hero from "../components/homepage/hero";
+import Footer from "../components/common/footer";
+import CTA from "../components/homepage/cta";
+import QuantumProductCards from "../components/common/cards";
 
 
 export default function HomePage() {
