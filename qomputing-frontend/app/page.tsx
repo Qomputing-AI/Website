@@ -10,7 +10,7 @@ export default function HomePage() {
     <main>
       <Navbar />
       <Hero />
-      <QuantumProductCards/>
+      <QuantumProductCards temp='hi'/>
       <CTA />
       <Footer />
     </main>
